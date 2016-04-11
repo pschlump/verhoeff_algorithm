@@ -1,10 +1,10 @@
 
-all: verhoeff vcheck
+all: vgen vcheck
 	./verhoeff 501 8102439 0112113 2314231 4423123 55123123 3332433 883478 884378347 748384783783738101 >test_data.json
-	./vcheck 561724816
+	./vcheck 561724816 920437368 89055291
 	
-verhoeff: verhoeff.c
+vgen: vgen.c verhoeff.c
 
-vcheck: vcheck.c
+vcheck: vcheck.c verhoeff.c
 
 

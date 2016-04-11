@@ -2,9 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "verhoeff.h"
 
 // From:  https://en.wikibooks.org/wiki/Algorithm_Implementation/Checksums/Verhoeff_Algorithm
 
+/*
 // The multiplication table
 static int verhoeff_d[10][10]  = {
   {0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
@@ -35,7 +37,7 @@ static int verhoeff_p[8][10] = {
 static int verhoeff_inv[] = {0, 4, 3, 2, 1, 5, 6, 7, 8, 9};
 
 //For a given number generates a Verhoeff digit
-int generate_verhoeff(const char* num)
+static int generate_verhoeff(const char* num)
 {
   int c;
   int len;
@@ -50,7 +52,7 @@ int generate_verhoeff(const char* num)
 
 //Validates that an entered number is Verhoeff compliant.
 //The check digit must be the last one.
-int validate_verhoeff(const char*  num)
+static int validate_verhoeff(const char*  num)
 {
   int c;
   int len;
@@ -62,8 +64,8 @@ int validate_verhoeff(const char*  num)
 
   return (c == 0);
 }
+*/
 
-/*
 // Main program will generate output in JSON format for test data.
 
 int main( int argc, char *argv[] ) {
@@ -78,5 +80,3 @@ int main( int argc, char *argv[] ) {
 	}
 	printf ( "]\n" );
 }
-
-*/

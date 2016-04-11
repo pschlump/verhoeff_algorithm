@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "verhoeff.h"
 
+/*
 // From:  https://en.wikibooks.org/wiki/Algorithm_Implementation/Checksums/Verhoeff_Algorithm
 
 // The multiplication table
@@ -62,6 +64,7 @@ static int validate_verhoeff(const char*  num)
 
   return (c == 0);
 }
+*/
 
 // Main program will generate output in JSON format for test data.
 
