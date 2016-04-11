@@ -68,12 +68,15 @@ static int validate_verhoeff(const char*  num)
 int main( int argc, char *argv[] ) {
 	int r;
 	char *com;
-	printf ( "[\n" );
 	for ( int i = 1; i < argc; i++ ) {
-		r = generate_verhoeff( argv[i] );
+		// r = generate_verhoeff( argv[i] );
 		// printf ( "%d: [%s] %d\n", i, argv[i], r );
-		com = ( (i+1) < argc ) ? "," : "";
-		printf ( "{ \"Nth\":%d, \"Str\":\"%s\", \"Verhoeff\":%d }%s\n", i, argv[i], r, com );
+		// com = ( (i+1) < argc ) ? "," : "";
+		// printf ( "{ \"Nth\":%d, \"Str\":\"%s\", \"Verhoeff\":%d }%s\n", i, argv[i], r, com );
+		if ( validate_verhoeff(argv[i]) ) {
+			printf ( "%s is Valid\n", argv[i] );
+		} else {
+			printf ( "%s NOPE!\n", argv[i] );
+		}
 	}
-	printf ( "]\n" );
 }
