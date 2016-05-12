@@ -1,6 +1,9 @@
 Verhoeff Algorithm
 ==================
 
+
+[![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/pschlump/Go-FTL/master/LICENSE)
+
 This is an implementation of the Verhoeff algorithm for checking
 that numbers are entered correctly.
 
