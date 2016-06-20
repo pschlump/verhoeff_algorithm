@@ -43,7 +43,7 @@ func Test_VerhoeffAlgorithm(t *testing.T) {
 		rs := GenerateVerhoeffString(test.Str)
 		exp := fmt.Sprintf("%s%d", test.Str, r)
 		if rs != exp {
-			t.Errorf("Test %d: Expected %d got %d\n", ii, exp, rs)
+			t.Errorf("Test %d: Expected %s got %s\n", ii, exp, rs)
 		}
 
 		// test the validate -- should indicate true
