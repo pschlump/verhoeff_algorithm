@@ -1,8 +1,6 @@
 //
-// Go-FTL
-//
 // Copyright (C) Philip Schlump, 2014-2016
-// MIT Licnesed.
+// MIT Licensed.
 //
 package verhoeff_algorithm
 
