@@ -1,10 +1,10 @@
 package main
 
 //
-// Go-FTL
+// Verhoeff Algorithm
 //
 // Copyright (C) Philip Schlump, 2014-2016
-// MIT Licnesed.
+// MIT Licensed.
 //
 // Command line to run the Verhoeff_Algorithm
 //
