@@ -18,6 +18,11 @@ was at the time thought impossible with such a code."
 
 [Algorythm in a bunch of languages, but not GO (golang)](https://en.wikibooks.org/wiki/Algorithm_Implementation/Checksums/Verhoeff_Algorithm)
 
+In Go (swift)
+-------------
+
+[I have also implemented this in Swift.](https://github.com/pschlump/verhoeff_swift)
+
 LICENSE
 -------
 
