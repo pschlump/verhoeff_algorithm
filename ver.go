@@ -1,7 +1,7 @@
 //
 // Verhoeff Algorithm
 //
-// Copyright (C) Philip Schlump, 2014-2016
+// Copyright (C) Philip Schlump, 2014-2019.
 // MIT Licensed.
 //
 //
@@ -39,7 +39,7 @@ var verhoeff_p = [][]int{
 //The inverse table
 var verhoeff_inv = []int{0, 4, 3, 2, 1, 5, 6, 7, 8, 9}
 
-//For a given number generates a Verhoeff digit
+// GenerateVerhoeff will For a given number generates a Verhoeff digit
 func GenerateVerhoeff(num string) int {
 	c := 0
 	ll := len(num)
@@ -49,13 +49,14 @@ func GenerateVerhoeff(num string) int {
 	return verhoeff_inv[c]
 }
 
+// GenerateVerhoeffString adds a checksum as the last digit to a numeric string.
 func GenerateVerhoeffString(s string) (newS string) {
 	r := GenerateVerhoeff(s)
 	newS = s + []string{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}[r%10]
 	return
 }
 
-//Validates that an entered number is Verhoeff compliant.  The check digit must be the last one.
+// ValidateVerhoeff returns true if the passed string 'num' is Verhoeff compliant.  The check digit must be the last one.
 func ValidateVerhoeff(num string) bool {
 	c := 0
 	ll := len(num)
@@ -63,4 +64,12 @@ func ValidateVerhoeff(num string) bool {
 		c = verhoeff_d[c][verhoeff_p[(i % 8)][num[ll-i-1]-'0']]
 	}
 	return (c == 0)
+}
+
+// ValidateAndStrip checks the string, if it is valid then the string w/o the checksum is returned.
+func ValidateAndStrip(num string) (ok bool, s string) {
+	if ValidateVerhoeff(num) {
+		return true, num[0 : len(num)-1]
+	}
+	return false, ""
 }
