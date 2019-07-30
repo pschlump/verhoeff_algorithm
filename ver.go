@@ -7,6 +7,8 @@
 //
 package verhoeff_algorithm
 
+import "unicode"
+
 // From https://en.wikibooks.org/wiki/Algorithm_Implementation/Checksums/Verhoeff_Algorithm
 // based on the "C" implementation
 
@@ -58,6 +60,9 @@ func GenerateVerhoeffString(s string) (newS string) {
 
 // ValidateVerhoeff returns true if the passed string 'num' is Verhoeff compliant.  The check digit must be the last one.
 func ValidateVerhoeff(num string) bool {
+	if !IsInt(num) {
+		return false
+	}
 	c := 0
 	ll := len(num)
 	for i := 0; i < ll; i++ {
@@ -72,4 +77,13 @@ func ValidateAndStrip(num string) (ok bool, s string) {
 		return true, num[0 : len(num)-1]
 	}
 	return false, ""
+}
+
+func IsInt(s string) bool {
+	for _, c := range s {
+		if !unicode.IsDigit(c) {
+			return false
+		}
+	}
+	return true
 }
