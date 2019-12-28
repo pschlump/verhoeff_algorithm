@@ -22,3 +22,5 @@ _testmain.go
 *.exe
 *.test
 *.prof
+cli/note.1
+js
