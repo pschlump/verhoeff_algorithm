@@ -29,6 +29,7 @@ func Test_VerhoeffAlgorithm(t *testing.T) {
 		{Str: "883478", Verhoeff: 9},                 //
 		{Str: "884378347", Verhoeff: 7},              //
 		{Str: "748384783783738101", Verhoeff: 6},     //
+		{Str: "58584", Verhoeff: 9},                  //
 	}
 
 	for ii, test := range tests {
