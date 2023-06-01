@@ -1,3 +1,3 @@
 module github.com/pschlump/verhoeff_algorithm
 
-go 1.17
+go 1.19
